@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="plugin/bootstrap4/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="plugin/toastr/build/toastr.min.css">
+        <link rel="stylesheet" href="plugin/funkyradio/funkyradio.min.css">
+        <link rel="stylesheet" href="css/parking-system.css">
+
+        <title>Estacionamento</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+         <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+               <a class="nav-link" href="#">Sign out</a>
+            </li>
+         </ul>
+      </nav>
+      <div class="container-fluid">
+         <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+               <div class="sidebar-sticky">
+                  <ul class="nav flex-column">
+                     <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                        <span data-feather="home"></span>
+                        Dashboard <span class="sr-only">(current)</span>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="clientes.html">
+                        <span data-feather="file"></span>
+                        Clientes
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="shopping-cart"></span>
+                        Produtos
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="users"></span>
+                        Vendas
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="bar-chart-2"></span>
+                        Reports
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="layers"></span>
+                        Integrations
+                        </a>
+                     </li>
+                  </ul>
+                  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                     <span>Saved reports</span>
+                     <a class="d-flex align-items-center text-muted" href="#">
+                     <span data-feather="plus-circle"></span>
+                     </a>
+                  </h6>
+                  <ul class="nav flex-column mb-2">
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file-text"></span>
+                        Relatórios de Vendas
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file-text"></span>
+                        Relatórios de Carros
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file-text"></span>
+                        Social engagement
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file-text"></span>
+                        Year-end sale
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+               <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                  <h1 class="h2">Registrar Entrada de Veículo</h1>
+               </div>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Início</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Registrar Entrada de Veículo</li>
+                    </ol>
+                </nav>
+
+                <div class="container-fluid">
+
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar por nome, cpf, veiculo ou placa">
+                    </div>
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Cliente</th>
+                                <th>Veículo</th>
+                                <th>Placa</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="badge badge-success p-2">Saiu</span>
+                                </td>
+                                <td>ALISSON DE PÁDUA</td>
+                                <td>CHEVROLET - AGILE 2011</td>
+                                <td>HMT-4070</td>
+                                <td>
+                                    <button id="btnEntrance" type="button" class="btn btn-info">Registrar Entrada</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+         </div>
+      </div>
+
+      <div id="myOpenSpace" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-full" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Vagas Disponíveis</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="funkyradio">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio1" />
+                                        <label for="radio1">01 - SUPA1</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio2" />
+                                        <label for="radio2">02 - SUPA2</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio3" />
+                                        <label for="radio3">03 - SUPA3</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio4" />
+                                        <label for="radio4">04 - SUPA4</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio5" />
+                                        <label for="radio5">05 - SUPA5</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio6" />
+                                        <label for="radio6">06 - SUPA6</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio7" />
+                                        <label for="radio7">07 - SUPA7</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio8" />
+                                        <label for="radio8">08 - SUPA8</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio9" />
+                                        <label for="radio9">09 - SUPA9</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio10" />
+                                        <label for="radio10">010 - SUPA10</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio11" />
+                                        <label for="radio11">011 - SUPA11</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-xs-6">
+                                    <div class="funkyradio-info">
+                                        <input type="radio" name="radio" id="radio12" />
+                                        <label for="radio12">012 - SUPA12</label>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnConfirmEntrance" type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <script src="plugin/jquery33/jquery-3.3.1.min.js"></script>
+      <script src="plugin/bootstrap4/dist/js/popper.min.js"></script>
+      <script src="plugin/bootstrap4/dist/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <script src="plugin/jquerymask/dist/jquery.mask.min.js"></script>
+      <script src="plugin/toastr/build/toastr.min.js"></script>
+      <script src="plugin/sweetalert2/sweetalert2.min.js"></script>
+
+    <script>
+        feather.replace();
+        
+
+        $("#btnEntrance").click(function(e){
+            $("#myOpenSpace").modal("show");
+        });
+
+        $("#myOpenSpace").on('hide.bs.modal', function(){
+            
+            swal({
+                    title: 'Confirmação',
+                    html: "Deseja confirmar a entrada do veículo <br>AGILE 2011 <br>Placa: HMT-4070 <br>Cliente: Alisson de Pádua ?",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#17a2b8',
+                    cancelButtonColor: '#d33',
+                    cancelButtonText: 'Não',
+                    confirmButtonText: 'Sim, confirmar entrada!'
+                }).then((result) => {
+                    if (result.value) {
+                        swal(
+                        'Sucesso',
+                        'Veículo liberado para estacionar',
+                        'success'
+                        )
+                    }
+                });
+        });
+
+
+    </script>
+   </body>
+</html>
