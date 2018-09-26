@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="plugin/bootstrap4/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="plugin/toastr/build/toastr.min.css">
+      <title>Estacionamento</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+         <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+               <a class="nav-link" href="#">Sign out</a>
+            </li>
+         </ul>
+      </nav>
+      <div class="container-fluid">
+         <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+               <div class="sidebar-sticky">
+                  <ul class="nav flex-column">
+                     <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                        <span data-feather="home"></span>
+                        Dashboard <span class="sr-only">(current)</span>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="clientes.html">
+                        <span data-feather="file"></span>
+                        Clientes
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="shopping-cart"></span>
+                        Produtos
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="users"></span>
+                        Vendas
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="bar-chart-2"></span>
+                        Reports
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="layers"></span>
+                        Integrations
+                        </a>
+                     </li>
+                  </ul>
+                  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                     <span>Saved reports</span>
+                     <a class="d-flex align-items-center text-muted" href="#">
+                     <span data-feather="plus-circle"></span>
+                     </a>
+                  </h6>
+                  <ul class="nav flex-column mb-2">
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file-text"></span>
+                        Relatórios de Vendas
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file-text"></span>
+                        Relatórios de Carros
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file-text"></span>
+                        Social engagement
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">
+                        <span data-feather="file-text"></span>
+                        Year-end sale
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+
+               <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                  <h1 class="h2">Registrar Saída de Veículo</h1>
+               </div>
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Início</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Registrar Saída de Veículo</li>
+                    </ol>
+                </nav>
+
+                <div class="container-fluid">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Cliente</th>
+                                <th>Veículo</th>
+                                <th>Placa</th>
+                                <th>Vaga</th>
+                                <th>Entrada</th>
+                                <th>Saída</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <span class="badge badge-warning p-2">Estacionado</span>
+                                </td>
+                                <td>ALISSON DE PÁDUA</td>
+                                <td>CHEVROLET - AGILE 2011</td>
+                                <td>HMT-4070</td>
+                                <td>SUPA1</td>
+                                <td>26/09/2018 - 08:30</td>
+                                <td>
+                                    <button type="button" class="btn btn-info btnCloseBill">Confirmar Saída</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </main>
+         </div>
+      </div>
+
+        <div id="myCloseBill" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Relatório de Saída</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="partner">Incluir desconto de Parceiro?</label>
+                            <select class="form-control" id="partner" name="partner">
+                                <option value="">Nenhum</option>
+                                <option value="">Restaurante Galinha Caipirinha</option>
+                            </select>
+                        </div>
+                        <h5>Fechamento</h5>
+                        <table class="table table-hover">
+                                <tr>
+                                    <td>Total Horas</td>
+                                    <td>02:45</td>
+                                </tr>
+                                <tr>
+                                    <td>Horas à Pagar</td>
+                                    <td>03:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>R$ 11,00</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-success"><b>Desconto Restaurante (50%)</b></td>
+                                    <td class="text-success"><b>R$ 5,50</b></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-info"><b>Total à Pagar</b></td>
+                                    <td class="text-info"><b>R$ 5,50</b></td>
+                                </tr>
+                            </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-info">Concluir Saída</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      <script src="plugin/jquery33/jquery-3.3.1.min.js"></script>
+      <script src="plugin/bootstrap4/dist/js/popper.min.js"></script>
+      <script src="plugin/bootstrap4/dist/js/bootstrap.min.js"></script>
+      <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+      <script src="plugin/jquerymask/dist/jquery.mask.min.js"></script>
+      <script src="plugin/toastr/build/toastr.min.js"></script>
+
+    <script>
+        feather.replace();
+
+        $("#zipcode").mask("00000-000");
+        $("#number").mask("#");
+        
+
+        $(".btnCloseBill").click(function(e){
+            $("#myCloseBill").modal("show");
+        });
+
+        $(".btnFindZipcode").click(function(e){
+     
+            var zipcode = $("#zipcode").val();
+            
+            if(zipcode.length != 9){
+                toastr.error("O CEP digitado é inválido");
+            }else{
+                $.ajax({
+                    type: "GET",
+                    url: "https://viacep.com.br/ws/"+zipcode+"/json",
+                    async: true,
+                    statusCode: {
+                        400: function(response){
+                            toastr.error("CEP não encontrado, verifique as informações e tente novamente");
+                        }
+                    }
+                }).done(function(zip, statusText, xhr){
+  
+                    if(zip.erro) {
+                        toastr.error("Esse CEP não encontrado, tente novamente");
+                    }else{
+                        $("#state").val(zip.uf.toUpperCase());
+                        $("#city").val(zip.localidade.toUpperCase());
+                        $("#district").val(zip.bairro.toUpperCase());
+                        $("#street").val(zip.logradouro.toUpperCase());
+                        $("#number").focus();
+                    }
+
+                });
+            }
+        });
+
+    </script>
+   </body>
+</html>
