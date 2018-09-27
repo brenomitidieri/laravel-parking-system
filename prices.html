@@ -79,7 +79,7 @@
                            </a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="#">
+                           <a class="nav-link" href="prices.html">
                            <span data-feather="tag"></span>
                            Tabela de Preços
                            </a>
@@ -87,83 +87,85 @@
                        </ul>
                   </div>
                </nav>
-               <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                  <div class="d-flex align-items-start pt-3 pb-2 mb-3 border-bottom">
-                       <h2>Novo Veículo</h2>
-                  </div>
-                  <nav aria-label="breadcrumb">
-                       <ol class="breadcrumb">
-                         <li class="breadcrumb-item"><a href="index.html#">Dashboard</a></li>
-                         <li class="breadcrumb-item"><a href="vehicles.html">Veiculo</a></li>
-                         <li class="breadcrumb-item active" aria-current="page">Novo Veiculo</li>
-                       </ol>
-                   </nav>
-                  <div class="container-fluid">
-   
-                       <fieldset disabled>
-                           <div class="form-group">
-                               <label for="disabledTextInput">Nome do Cliente</label>
-                               <input type="text" id="disabledTextInput" class="form-control" placeholder="Breno Mitidieri">
-                           </div>
-                      </fieldset>
-                             <div class="form-group">
-                               <label for="exampleFormControlSelect1">Fabricante</label>
-                               <select class="form-control" id="exampleFormControlSelect1">
-                                 <option>Ford</option>
-                                 <option>Jeep</option>
-                                 <option>Chevrolet</option>
-                                 <option>Ferrari</option>
-                                  </select>
-                             </div>
-                       
-                       <div class="form-group">
-                           <label for="exampleFormControlInput1">Cor do Veículo</label>
-                           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex. Verde">
-                       </div>
-                       <div class="form-group">
-                           <label for="exampleFormControlInput1">Placa</label>
-                           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Exemplo GXV 4070">
-                       </div>
-                       <div class="form-group">
-                               <label for="exampleFormControlSelect1">Modelo</label>
-                               <select class="form-control" id="exampleFormControlSelect1">
-                                 <option>Corcel 1</option>
-                                 <option>Focus</option>
-                                 <option>Ranger</option>
-                                 <option>Fiesta</option>
-                                  </select>
-                             </div>
-                             <div class="form-group">
-                                   <label for="exampleFormControlInput1">Ano de Fabricação</label>
-                                   <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex 1973">
-                               </div>
-                               
-                               <div class="form-group text-right">
-                                       <button class="btn btn-success">Cadastrar</button>
-                                   </div>
-                                       
-                       
-                      
-                  </div>
-                  
-   
-               </main>
-            </div>
-         </div>
+               
             </nav>
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                  <h1 class="h2">Dashboard</h1>
-               </div>
-
-               <div class="container-fluid">
-                   <h1>CONTEUDO</h1>
+                  <h1 class="h2">Tabela de Preços</h1>
                </div>
                
+               <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                      <li class="breadcrumb-item"><a href="#">Tabela de Preços</a></li>
+                    </ol>
+                </nav>
+                <div> <button type="button" class="btn btn-success"> + Novo Serviço</button></div>
+               
+                <div class="container-fluid">
+
+
+
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Serviço</th>
+                            <th>Valor</th>
+                            <th>Descrição</th>
+                            
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="badge badge-success p-2">ativo</span>
+                            </td>
+                            <td>Hora Comum</td>
+                            <td>R$ 3,00</td>
+                            <td>Valor da Hora Comum</td>
+                        
+                            <td>
+                                <button id="btnEntrance" type="button" class="btn btn-primary">Editar</button>
+                                <button id="btnEntrance" type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <span class="badge badge-success p-2">ativo</span>
+                            </td>
+                            <td>Hora Inicial</td>
+                            <td>R$ 4,00</td>
+                            <td>Valor da Hora Inicial</td>
+                            <td>
+                                <button id="btnEntrance" type="button" class="btn btn-primary">Editar</button>
+                                <button id="btnEntrance" type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <span class="badge badge-success p-2">ativo</span>
+                            </td>
+                            <td>Hora Extra</td>
+                            <td>R$ 3,50</td>
+                            <td>Valor da Hora Após 4 horas</td>
+                            <td>
+                                <button id="btnEntrance" type="button" class="btn btn-primary">Editar</button>
+                                <button id="btnEntrance" type="button" class="btn btn-danger">Excluir</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </main>
          </div>
       </div>
+    </div>
       <script src="plugin/jquery33/jquery-3.3.1.min.js"></script>
       <script src="plugin/bootstrap4/dist/js/popper.min.js"></script>
       <script src="plugin/bootstrap4/dist/js/bootstrap.min.js"></script>

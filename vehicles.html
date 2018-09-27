@@ -23,25 +23,25 @@
                <div class="sidebar-sticky">
                   <ul class="nav flex-column">
                      <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link active" href="index.html#">
                         <span data-feather="bar-chart"></span>
                         Dashboard <span class="sr-only">(current)</span>
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="clientes.html">
+                        <a class="nav-link" href="entrada.html">
                         <span data-feather="plus-square"></span>
                         Registrar Entrada
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="saida.html">
                         <span data-feather="plus-square"></span>
                         Registrar Saída
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="cliente.html">
                         <span data-feather="users"></span>
                         Clientes
                         </a>
@@ -59,21 +59,16 @@
                         </a>
                      </li>
                      <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="parceiros.html">
                         <span data-feather="user-check"></span>
                         Parceiros
                     </a>
                     </li>
                   </ul>
-                  <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                     <span>Configurações</span>
-                     <a class="d-flex align-items-center text-muted" href="#">
-                     <span data-feather="settings"></span>
-                     </a>
-                  </h6>
+                  
                   <ul class="nav flex-column mb-2">
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="estacionamento.html">
                         <span data-feather="clipboard"></span>
                         Estacionamento
                         </a>
@@ -85,7 +80,7 @@
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="prices.html">
                         <span data-feather="tag"></span>
                         Tabela de Preços
                         </a>
@@ -99,8 +94,8 @@
                </div>
                <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                      <li class="breadcrumb-item"><a href="#">Veiculo</a></li>
+                      <li class="breadcrumb-item"><a href="index.html#">Dashboard</a></li>
+                      <li class="breadcrumb-item"><a href="vehicles.html">Veiculo</a></li>
                       <li class="breadcrumb-item active" aria-current="page">Novo Veiculo</li>
                     </ol>
                 </nav>
@@ -111,13 +106,17 @@
                             <label for="disabledTextInput">Nome do Cliente</label>
                             <input type="text" id="disabledTextInput" class="form-control" placeholder="Breno Mitidieri">
                         </div>
-                    </fieldset>
-                    <fieldset disabled>
-                        <div class="form-group">
-                            <label for="disabledTextInput">Fabricante</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Ford">
-                        </div>
-                    </fieldset>
+                   </fieldset>
+                          <div class="form-group">
+                            <label for="exampleFormControlSelect1">Fabricante</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                              <option>Ford</option>
+                              <option>Jeep</option>
+                              <option>Chevrolet</option>
+                              <option>Ferrari</option>
+                               </select>
+                          </div>
+                    
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Cor do Veículo</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex. Verde">
